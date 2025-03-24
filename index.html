@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maxim Volosenco Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div id="front-page" class="screen">
+    <div class="x2 center">
+        <div id="name-header" class="x2">
+            <p class="f1">Welcome, I am</p>
+            <h1 class="f5">Maxim Volosenco</h1>
+            <p class="f2">Software Engineer in Test</p>
+            <p class="f2 light">based in Zurich, CH</p>
+        </div>
+    </div>
+<!--    <h1 id="very-important">БАБЫ</br> НЕ ЗВОНИТЕ МНЕ!</br>Я СЧАСТЛИВО ЖЕНАТ!</h1>-->
+    <div class="x2 center bg-dark">
+        <div class="scrollable">
+            <section>
+                <header>
+                    <img src="media/skills-icon.svg" alt="note icon"/>
+                    Skills
+                </header>
+                <ul class="skills-grid">
+                    <li>Java, Spring</li>
+                    <li>JavaScript/TypeScript</li>
+                    <li>React, Vue.js, Angular</li>
+                    <li>Django, Flask</li>
+                    <li>MySQL, Postgres, MongoDB</li>
+                </ul>
+                <ul class="skills-grid">
+                    <li>JIRA</li>
+                    <li>ReportPortal</li>
+                    <li>TestRail</li>
+                    <li>XRay</li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <img src="media/note-icon.svg" alt="note icon"/>
+                    Experience
+                </header>
+                <div class="work slot present">
+                    <div id="present-indicator"></div>
+                    <h2>SIX Group AG</h2>
+                    <div class="place">
+                        <img src="media/chf.png" alt="CH"/>
+                        <h4>Zurich, Switzerland</h4>
+                    </div>
+                    <div class="titles">
+                        <h3>Senior Test Automation Engineer</h3>
+                        <p>Apl 2024 - Present</p>
+                        <div class="titles-separator"></div>
+                        <h3>Test Automation Engineer</h3>
+                        <p>Aug 2022 - Apl 2024</p>
+                    </div>
+                </div>
+                <div class="work slot">
+                    <h2>Bitpanda GmbH</h2>
+                    <div class="place">
+                        <img src="media/aut.png" alt="AT"/>
+                        <h4>Vienna, Austria</h4>
+                    </div>
+                    <div class="titles">
+                        <h3>Test Automation Engineer</h3>
+                        <p>Aug 2021 - Aug 2022</p>
+                    </div>
+                </div>
+                <div class="work slot">
+                    <h2>Ericsson</h2>
+                    <div class="place">
+                        <img src="media/hun.png" alt="HU"/>
+                        <h4>Budapest, Hungary</h4>
+                    </div>
+                    <div class="titles">
+                        <h3>Student Developer</h3>
+                        <p>Oct 2019 - Jul 2021</p>
+                    </div>
+                </div>
+                <div class="work slot">
+                    <h2>Allied Testing (M-Testing)</h2>
+                    <div class="place">
+                        <img src="media/mdl.png" alt="MD"/>
+                        <h4>Chisinau, Moldova</h4>
+                    </div>
+                    <div class="titles">
+                        <h3>Test Automation Engineer</h3>
+                        <p>Jul 2017 - Jun 2019</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <img src="media/education-icon.svg" alt="note icon"/>
+                    Education
+                </header>
+                <div class="edu slot">
+                    <h2>Computer Science for Autonomous Systems MSc.</h2>
+                    <h3>Eötvös Loránd University (ELTE)</h3>
+                    <div class="place">
+                        <img src="media/hun.png" alt="HU"/>
+                        <h4>Budapest, Hungary</h4>
+                    </div>
+                    <p>2019 - 2021</p>
+                </div>
+                <div class="edu slot">
+                    <h2>Information Technologies BAc.</h2>
+                    <h3>Moldova State University (USM)</h3>
+                    <div class="place">
+                        <img src="media/mdl.png" alt="MD"/>
+                        <h4>Chisinau, Moldova</h4>
+                    </div>
+                    <p>2015 - 2019</p>
+                </div>
+            </section>
+            <section>
+                <header>
+                    <img src="media/languages-icon.svg" alt="note icon"/>
+                    Languages
+                </header>
+                <ul class="skills-grid">
+                    <li>English (C1)</li>
+                    <li>Romanian (B1)</li>
+                    <li>German (B1)</li>
+                    <li>Russian (C2)</li>
+                </ul>
+            </section>
+            <section>
+                <header>
+                    <img src="media/references-icon.svg" alt="note icon"/>
+                    References
+                </header>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<style>
+    body,
+    html,
+    .screen {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Poppins;
+    }
+
+    body * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bg-dark {
+        background-color: #171717;
+        height: 100vh;
+        display: block;
+        padding: 8em;
+    }
+
+    #front-page {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        background: azure;
+        align-items: center;
+    }
+
+    #name-header {
+        display: flex;
+        width: auto;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1em;
+        color: #171717;
+    }
+
+    .x2 {
+        width: 50%;
+        display: flex;
+    }
+
+    .center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f5 {
+        font-size: 5em;
+    }
+
+    .f2 {
+        font-size: 2em;
+    }
+
+    .f1 {
+        font-size: 1.5em;
+    }
+
+    .light {
+        font-weight: 200;
+    }
+
+    .scrollable {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .scrollable > section {
+        width: 100%;
+        height: auto;
+        color: azure;
+    }
+
+    .scrollable > section > header {
+        width: 100%;
+        font-size: 2em;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        padding-bottom: 1em;
+    }
+
+    .scrollable > section > header {
+        padding-left: 3em;
+        font-size: 1.4em;
+        padding-top: 1em;
+    }
+
+    .scrollable > section > header > img {
+        color: azure;
+        max-height: 48px;
+        width: auto;
+    }
+
+    ul {
+        font-size: 1.4em;
+        font-weight: 200;
+        display: flex;
+        gap: .5em;
+        flex-direction: column;
+        padding: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .skills-grid li {
+        cursor: pointer;
+    }
+
+    .skills-grid li:hover {
+        color: #4cff35;
+    }
+
+    .slot {
+        cursor: pointer;
+    }
+
+    section .slot {
+        padding: 2em;
+    }
+
+    section .slot .place {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    section .slot.edu .place {
+        padding-top: .5em;
+    }
+
+    section .slot .place img {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+    }
+
+    section .slot h2 {
+        font-size: 1.5em;
+        font-weight: 300;
+        padding-bottom: .5em;
+    }
+
+    section .slot h2:hover {
+        text-decoration: underline;
+    }
+
+    section .slot h3 {
+        font-weight: 500;
+    }
+
+    section .slot h4 {
+        padding-bottom: 1.4em;
+        font-weight: 300;
+    }
+
+    section .slot p {
+        font-size: 1.2em;
+        padding-bottom: .3em;
+        font-weight: 300;
+    }
+
+    section .slot.work p {
+        padding-top: .1em;
+    }
+
+    #very-important {
+        font-size: 6em;
+        text-align: center;
+        color: red;
+    }
+
+    section .work .titles .titles-separator {
+        height: 1.5em;
+        width: 100%;
+        border-left: 6px dotted azure;
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    @keyframes present-bip {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    #present-indicator {
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background: #42dd2d;
+        position: absolute;
+        top: 2.65em;
+        left: 0;
+        animation: present-bip 1s infinite alternate;
+    }
+
+    .present {
+        position: relative;
+    }
+
+    @media screen and (max-width: 1920px) {
+        #front-page {
+            flex-direction: column;
+        }
+
+        .x2 {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+</style>
