@@ -156,6 +156,7 @@
         box-sizing: border-box;
         padding: 0;
         margin: 0;
+        /*outline: 1px solid white;*/
     }
 
     .bg-dark {
@@ -228,18 +229,14 @@
 
     .scrollable > section > header {
         width: 100%;
-        font-size: 2em;
+        font-size: 1.4em;
         font-weight: 300;
         display: flex;
         align-items: center;
         gap: .5em;
         padding-bottom: 1em;
-    }
-
-    .scrollable > section > header {
-        padding-left: 3em;
-        font-size: 1.4em;
         padding-top: 1em;
+        padding-left: 1em;
     }
 
     .scrollable > section > header > img {
@@ -363,14 +360,58 @@
         position: relative;
     }
 
-    @media screen and (max-width: 1920px) {
+    @media only screen and (max-width: 512px) {
+        .bg-dark {
+            padding: 1em;
+        }
+
+        body {
+            font-size: 32px;
+        }
+    }
+
+    @media only screen and (min-width: 513px) and (max-width: 1920px) {
         #front-page {
             flex-direction: column;
+        }
+
+        #name-header {
+            width: min-content;
         }
 
         .x2 {
             width: 100%;
             height: 100vh;
+        }
+
+        .scrollable {
+            gap: 1.5em;
+        }
+
+        .center {
+            align-items: initial;
+            height: max-content;
+        }
+
+        .scrollable {
+            overflow-x: visible;
+            overflow-y: visible;
+        }
+
+        .skills-grid {
+            display: block;
+        }
+
+        .bg-dark {
+            padding: 1em;
+        }
+
+        body {
+            font-size: 24px;
+        }
+
+        .f5 {
+            line-height: 1em;
         }
     }
 </style>
