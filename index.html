@@ -10,6 +10,7 @@
 </head>
 <body>
 <div id="front-page" class="screen">
+    <img class="mv-main-photo" src="media/mv-main-photo.png" alt="Maxim Volosenco">
     <div class="x2 center">
         <div id="name-header" class="x2">
             <p class="f1">Welcome, I am</p>
@@ -165,11 +166,20 @@
         font-family: Poppins;
     }
 
+    .mv-main-photo {
+        width: auto;
+        height: 96vh;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        z-index: -1;
+        opacity: .6;
+    }
+
     body * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        /*outline: 1px solid white;*/
     }
 
     @keyframes fade-in-from-left {
@@ -217,7 +227,6 @@
         min-height: 100vh;
         display: flex;
         flex-direction: row;
-        background: azure;
         align-items: center;
     }
 
@@ -519,6 +528,13 @@
 
         .scrollable > section > header {
             padding-left: .5em;
+        }
+
+        .mv-main-photo {
+            height: 80vh;
+            left: 72%;
+            transform: translateX(-50%);
+            opacity: .5;
         }
     }
 
