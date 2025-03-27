@@ -218,7 +218,7 @@
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
-        gap: 4em;
+        gap: 2em;
     }
 
     .scrollable > section {
@@ -229,14 +229,12 @@
 
     .scrollable > section > header {
         width: 100%;
-        font-size: 1.4em;
+        font-size: 2.1em;
         font-weight: 300;
         display: flex;
         align-items: center;
         gap: .5em;
-        padding-bottom: 1em;
         padding-top: 1em;
-        padding-left: 1em;
     }
 
     .scrollable > section > header > img {
@@ -360,17 +358,9 @@
         position: relative;
     }
 
-    @media only screen and (max-width: 512px) {
-        .bg-dark {
-            padding: 1em;
-        }
-
-        body {
-            font-size: 32px;
-        }
-    }
-
-    @media only screen and (min-width: 513px) and (max-width: 1920px) {
+    @media only screen
+        /*and (min-width: 1025px)*/
+        and (max-width: 1920px) {
         #front-page {
             flex-direction: column;
         }
@@ -407,11 +397,43 @@
         }
 
         body {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         .f5 {
             line-height: 1em;
+        }
+
+        section .slot .place img {
+            width: 2em;
+            height: 2em;
+        }
+
+        section .slot h4 {
+            padding-top: .3em;
+            padding-bottom: 1.1em;
+        }
+
+        .scrollable > section > header > img {
+            max-height: 64px;
+        }
+
+        .scrollable > section > header {
+            padding-left: .5em;
+        }
+    }
+
+    @media only screen and (max-width: 981px) {
+        .bg-dark {
+            padding: 1em;
+        }
+
+        body {
+            font-size: 28px;
+        }
+
+        .scrollable {
+            gap: 0;
         }
     }
 </style>
