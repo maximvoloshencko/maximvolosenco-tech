@@ -18,7 +18,7 @@
             <p class="f2 light">based in Zurich, CH</p>
         </div>
     </div>
-<!--    <h1 id="very-important">БАБЫ</br> НЕ ЗВОНИТЕ МНЕ!</br>Я СЧАСТЛИВО ЖЕНАТ!</h1>-->
+    <!--    <h1 id="very-important">БАБЫ</br> НЕ ЗВОНИТЕ МНЕ!</br>Я СЧАСТЛИВО ЖЕНАТ!</h1>-->
     <div class="x2 center bg-dark">
         <div class="scrollable">
             <section>
@@ -135,6 +135,19 @@
                     <img src="media/references-icon.svg" alt="note icon"/>
                     References
                 </header>
+                <div class="reference">
+                    <div class="from-who">
+                        <img src="media/ic-photo.jpeg" alt="HU"/>
+                        <div class="name-title-text">
+                            <h4>Ivan Costerin</h4>
+                            <h3>Senior Test Automation Engineer, <span class="company">Coherent Solutions</span></h3>
+                            <p>Knowing Maxim since university and working together with him has been great. He tackles
+                                tough IT challenges with ease and handles pressure like a pro. What I admire most about
+                                him is how he breaks down complex ideas so anyone can understand them and how he is
+                                always learning new technologies which makes him an invaluable part of any team.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
@@ -402,6 +415,50 @@
         position: relative;
     }
 
+    .reference {
+        padding: 2em;
+        padding-bottom: 0;
+    }
+
+    .reference .from-who {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2em;
+        gap: 2em;
+
+        img {
+            max-height: 192px;
+            border-radius: 8px;
+        }
+
+        .name-title-text {
+            display: flex;
+            flex-direction: column;
+            gap: .5em;
+
+            h4 {
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+
+            h3 {
+                font-weight: 500;
+
+                .company {
+                    text-transform: uppercase;
+                    font-size: 1.1em;
+                }
+            }
+
+            p {
+                padding-top: 1em;
+                font-weight: 300;
+                font-size: 1.1em;
+            }
+        }
+    }
+
     @media only screen and (max-width: 1920px) {
         #front-page {
             flex-direction: column;
@@ -468,6 +525,7 @@
     @media only screen and (max-width: 981px) {
         .bg-dark {
             padding: 1em;
+            padding-bottom: 8em;
         }
 
         body {
@@ -491,6 +549,39 @@
 
         section .slot p {
             font-size: 1.3em;
+        }
+
+        .reference .from-who {
+            flex-direction: column;
+            justify-content: center;
+            padding: 2em;
+            gap: 2em;
+
+            img {
+                max-height: 42vw;
+                border-radius: 50%;
+            }
+
+            .name-title-text {
+
+                h4 {
+                    font-size: 1.8em;
+                    text-align: center;
+                }
+
+                h3 {
+                    text-align: center;
+                    font-size: 1.5em;
+
+                    .company {
+                        font-size: 1.1em;
+                    }
+                }
+
+                p {
+                    font-size: 1.3em;
+                }
+            }
         }
     }
 </style>
