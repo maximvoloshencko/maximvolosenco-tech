@@ -9,14 +9,20 @@
           rel="stylesheet">
 </head>
 <body>
-<div id="front-page" class="screen">
-    <!--    <img class="mv-main-photo" src="media/mv-main-photo.png" alt="Maxim Volosenco">-->
+<div id="front-page" class="screen city-bg">
     <div class="x2 center">
         <div id="name-header" class="x2">
-            <p class="f1">Welcome, I am</p>
-            <h1 class="f5">Maxim Volosenco</h1>
-            <p class="f2">Software Engineer in Test</p>
-            <p class="f2 light">based in Zurich, CH</p>
+            <div class="one-side">
+                <div class="main-photo-block">
+                    <img class="mv-main-photo" src="media/ai-mv.png" alt="Maxim Volosenco">
+                </div>
+            </div>
+            <div class="one-side"
+                <p class="f1">Welcome, I am</p>
+                <h1 class="f5">Maxim Voloșenco</h1>
+                <p class="f2">Software Engineer in Test</p>
+                <p class="f2 light">based in Zurich, CH</p>
+            </div>
         </div>
     </div>
     <!--    <h1 id="very-important">БАБЫ</br> НЕ ЗВОНИТЕ МНЕ!</br>Я СЧАСТЛИВО ЖЕНАТ!</h1>-->
@@ -180,18 +186,21 @@
 
     .mv-main-photo {
         width: auto;
-        height: 96vh;
-        position: absolute;
-        left: 25%;
-        bottom: 0;
-        z-index: -1;
-        opacity: .6;
+        height: 16em;
     }
 
     body * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
+    }
+
+    .city-bg {
+        background-image: url("media/appenzell.jpeg");
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-color: rgba(0, 0, 0, .2);
+        background-blend-mode: darken;
     }
 
     @keyframes fade-in-from-left {
@@ -245,11 +254,27 @@
     #name-header {
         display: flex;
         width: auto;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         padding: 1em;
-        color: #171717;
+        color: #ffffff;
+        gap: 1em;
+
+        .main-photo-block {
+            width: 16em;
+            height: 16em;
+            border: .2em solid #171717;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #ffffff;
+            animation: fade-in .5s ease-in-out forwards;
+            animation-delay: 1.2s;
+            opacity: 0;
+        }
     }
 
     .x2 {
@@ -264,6 +289,7 @@
 
     .f5 {
         opacity: 0;
+        line-height: 1em;
         font-size: 5em;
         animation: fade-in-from-left .5s ease-in-out forwards;
     }
@@ -412,7 +438,7 @@
         margin-bottom: 6px;
     }
 
-    @keyframes present-bip {
+    @keyframes fade-in {
         from {
             opacity: 0;
         }
@@ -429,7 +455,7 @@
         position: absolute;
         top: 2.65em;
         left: 0;
-        animation: present-bip 1s infinite alternate;
+        animation: fade-in 1s infinite alternate;
     }
 
     .present {
@@ -489,8 +515,14 @@
             font-size: 18px;
         }
 
+        .city-bg {
+            background-size: cover;
+            background-position: center;
+        }
+
         #name-header {
             width: min-content;
+            flex-direction: column;
         }
 
         .x2 {
@@ -517,11 +549,7 @@
         }
 
         .bg-dark {
-            padding: 1em;
-        }
-
-        .f5 {
-            line-height: 1em;
+            padding: 3em;
         }
 
         section .slot .place img {
@@ -540,13 +568,6 @@
 
         .scrollable > section > header {
             padding-left: .5em;
-        }
-
-        .mv-main-photo {
-            height: 80%;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: .4;
         }
     }
 
