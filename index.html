@@ -535,6 +535,8 @@
     @media only screen and (max-width: 1920px) {
         #front-page {
             flex-direction: column;
+            opacity: 0;
+            animation: fade-in 1s forwards;
         }
 
         body {
@@ -672,11 +674,12 @@
 </style>
 <script>
     window.onload = function() {
-        let cityBackground = document.getElementsByClassName('city-bg')[0];
+        let cityBackground = document.getElementsByClassName('city-bg')[0]
+
         window.addEventListener('mousemove', event => {
             let offset = 8
             let offsetRight = ((event.clientY / window.innerHeight) * offset) - offset * 1.5
-            cityBackground.style.backgroundPositionY = `${offsetRight}px`;
+            cityBackground.style.backgroundPositionY = `${offsetRight}px`
         }, true)
     }
 </script>
