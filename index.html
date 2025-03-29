@@ -270,6 +270,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        opacity: 0;
+        animation: fade-in 1s forwards;
     }
 
     #name-header {
@@ -535,8 +537,6 @@
     @media only screen and (max-width: 1920px) {
         #front-page {
             flex-direction: column;
-            opacity: 0;
-            animation: fade-in 1s forwards;
         }
 
         body {
