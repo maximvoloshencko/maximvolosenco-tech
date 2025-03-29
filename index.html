@@ -10,6 +10,7 @@
 </head>
 <body>
 <div id="front-page" class="screen city-bg">
+    <p class="landmark">Seealpsee, Appenzell, Switzerland</p>
     <div class="x2 center">
         <div id="name-header" class="x2">
             <div class="one-side">
@@ -198,9 +199,22 @@
     .city-bg {
         background-image: url("media/appenzell.jpeg");
         background-repeat: no-repeat;
-        background-size: 50%;
+        background-size: 60%;
         background-color: rgba(0, 0, 0, .2);
         background-blend-mode: darken;
+    }
+
+    .landmark {
+        position: absolute;
+        bottom: 2em;
+        right: 50%;
+        padding-right: 3em;
+        font-weight: 300;
+        font-size: .8em;
+        color: #ffffff;
+        opacity: 0;
+        animation: fade-in 1s ease-in forwards;
+        animation-delay: 1.5s;
     }
 
     @keyframes fade-in-from-left {
@@ -264,7 +278,6 @@
         .main-photo-block {
             width: 16em;
             height: 16em;
-            border: .2em solid #171717;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -632,5 +645,22 @@
                 }
             }
         }
+
+        .landmark {
+            padding-right: 0;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
     }
 </style>
+<script>
+    window.onload = function() {
+        let cityBackground = document.getElementsByClassName('city-bg')[0];
+        window.addEventListener('mousemove', event => {
+            let offset = 8
+            let offsetRight = ((event.clientY / window.innerHeight) * offset) - offset * 1.5
+            cityBackground.style.backgroundPositionY = `${offsetRight}px`;
+        }, true)
+    }
+</script>
