@@ -152,10 +152,10 @@
                 </header>
                 <div class="reference">
                     <div class="from-who">
-                        <img src="media/ic-photo.jpeg" alt="HU"/>
+                        <img src="media/ic-photo.jpeg"/>
                         <div class="name-title-text">
                             <h4>Ivan Costerin</h4>
-                            <h3>Senior Test Automation Engineer, <span class="company">Coherent Solutions</span></h3>
+                            <h3>Senior Test Automation Engineer, <span class="company">Chisinau, Moldova</span></h3>
                             <p>Knowing Maxim since university and working together with him has been great. He tackles
                                 tough IT challenges with ease and handles pressure like a pro. What I admire most about
                                 him is how he breaks down complex ideas so anyone can understand them and how he is
@@ -163,10 +163,23 @@
                         </div>
                     </div>
                     <div class="from-who">
-                        <img src="media/gg-photo.jpeg" alt="HU"/>
+                        <img src="media/mc-photo.jpeg"/>
+                        <div class="name-title-text">
+                            <h4>Marius Ciortan</h4>
+                            <h3>Director Software Engineering, <span class="company">Vienna, Austria</span></h3>
+                            <p>I hired Maxim in August 2021 and since then I was impressed by the initiatives he took to
+                                establish QA processes and projects within Digital Assets group with minimum guidance,
+                                automating manual work and improving quality of our core services. Maxim consistently
+                                gave 100% of himself to our team, and was critical in ensuring the completion of our
+                                projects by the deadline. As a colleague, Maxim earns my highest recommendation and he
+                                will be an asset to any team!</p>
+                        </div>
+                    </div>
+                    <div class="from-who">
+                        <img src="media/gg-photo.jpeg"/>
                         <div class="name-title-text">
                             <h4>Giorgi Gviani</h4>
-                            <h3>Senior Architect Engineer, <span class="company">SIX</span></h3>
+                            <h3>Senior Architect Engineer, <span class="company">Zurich, Switzerland</span></h3>
                             <p>I have had pleasure of working with Maxim since he is one of the most skilled IT
                                 professionals I managed. His solid expertise in software test automation and his
                                 problem-solving skills consistently provided successful outcomes in his tasks. I would
@@ -521,8 +534,8 @@
                 font-weight: 500;
 
                 .company {
-                    text-transform: uppercase;
                     font-size: 1.1em;
+                    font-weight: 300;
                 }
             }
 
@@ -592,6 +605,16 @@
 
         .scrollable > section > header {
             padding-left: .5em;
+        }
+    }
+
+    @media only screen and (min-width: 982px) and (max-width: 1919px) {
+        body {
+            font-size: 14px;
+        }
+
+        .landmark {
+            width: 100%;
         }
     }
 
@@ -673,7 +696,7 @@
     }
 </style>
 <script>
-    window.onload = function() {
+    window.onload = function () {
         let cityBackground = document.getElementsByClassName('city-bg')[0]
 
         window.addEventListener('mousemove', event => {
